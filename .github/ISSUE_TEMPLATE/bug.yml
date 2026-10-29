@@ -1,0 +1,38 @@
+name: Bug report
+description: Something in Hearthlight or its setup went wrong
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting! Please don't paste passwords, personal files or anything private.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where
+      options: [Setup (installer), The app, Image or video generation, Uninstall, Other]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Hearthlight version
+      placeholder: e.g. 1.0.0
+  - type: input
+    id: pc
+    attributes:
+      label: Your PC
+      description: Windows version, graphics card and RAM (setup's "Your PC" page shows these).
+      placeholder: e.g. Windows 11, RTX 3060 12 GB, 32 GB RAM
+  - type: textarea
+    id: log
+    attributes:
+      label: Setup log (if setup failed)
+      description: Attach or paste the end of setup.log from your install folder (C:\Hearthlight\setup.log by default).
+      render: text

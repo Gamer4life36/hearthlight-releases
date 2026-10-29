@@ -1,0 +1,10 @@
+name: Comment or feedback
+description: Anything else you want to tell us
+labels: [feedback]
+body:
+  - type: textarea
+    id: text
+    attributes:
+      label: Your comment
+    validations:
+      required: true
